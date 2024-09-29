@@ -1,14 +1,5 @@
 package linkedlist;
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int val){
-        this.val = val;
-        this.next = null;
-    }
-}
-
 public class RecursiveReverse {
 
     public ListNode reverseLinkedList(ListNode head){
@@ -34,6 +25,9 @@ public class RecursiveReverse {
         RecursiveReverse recursiveReverse = new RecursiveReverse();
         ListNode reversedLinkedList = recursiveReverse.reverseLinkedList(head);
 
-        System.out.println(reversedLinkedList);
+        while(reversedLinkedList!=null){
+            System.out.println(reversedLinkedList.val);
+            reversedLinkedList = reversedLinkedList.next;
+        }
     }
 }
