@@ -9,10 +9,10 @@ public class ReverseRecursive {
         }
 
         //Recursion
-        ListNode newHead = reverseLinkedList(head.next);
-        head.next.next = head;
-        head.next = null;
-        return newHead;
+        ListNode newHead = reverseLinkedList(head.next); // Example: Returned 5 from base case
+        head.next.next = head; // Reversing the next ListNode // 4's next -> (5)'s next = 4 ... : Situation
+        head.next = null; // Breaking the above situation : 4 -> 5 -> 4 // we make 4's next = null, so that newHead becomes 5->4->null
+        return newHead; // returning 5->4->null
     }
 
     public static void main(String[] args){

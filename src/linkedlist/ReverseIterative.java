@@ -4,15 +4,17 @@ public class ReverseIterative {
 
     public ListNode reverseLinkedList(ListNode head){
 
+        // Pointers
         ListNode prev = null;
         ListNode next;
         ListNode cur = head;
 
+        // Traverse the head list
         while (cur !=null){
-            next = cur.next;
-            cur.next = prev;
-            prev = cur;
-            cur = next;
+            next = cur.next; // Adjusting next pointer
+            cur.next = prev; // Reversing the next LinkNode
+            prev = cur; // Adjusting prev pointer
+            cur = next; // Adjusting cur pointer
         }
 
         return prev;
